@@ -27,14 +27,14 @@ int Partition1(int *array, int left, int right){
     int pivot=left;
 
     do{
-        do{ i++; }while(array[pivot]>array[i]);
-        do{ j--; }while(array[pivot]<array[j]);
-        if(i<j) Swap(&array[i], &array[j]);
-    }while(i<j);
+        do{ i++; }while(array[pivot]>array[i]); //基準の値以下なら続行
+        do{ j--; }while(array[pivot]<array[j]); //基準の値以上なら続行
+        if(i<j) Swap(&array[i], &array[j]);     //i、jともに進まなくなれば交換
+    }while(i<j);    //i、jがぶつかるまで実行
 
-    Swap(&array[j], &array[pivot]);
+    Swap(&array[j], &array[pivot]); //ぶつかったところと基準を交換し、範囲内で昇順にする
 
-    return j;
+    return j;   //境目の添字を返す
 }
 
 /*ソート実行部分(昇順)*/
@@ -42,9 +42,9 @@ void Sort1(int *array, int left, int right){
     int pivot;
 
     if(left<right){
-        pivot=Partition1(array, left, right);
-        Sort1(array, left, pivot-1);
-        Sort1(array, pivot+1, right);
+        pivot=Partition1(array, left, right);   //基準点の境目を見つける
+        Sort1(array, left, pivot-1);    //境目より左側をソート
+        Sort1(array, pivot+1, right);   //境目より右側をソート
     }
 }
 
