@@ -57,3 +57,6 @@ int main(){
     return 0;
 
 }
+//安定な外部ソート
+//平均計算量O(nlogn)
+//最悪計算量でも0(nlogn)
