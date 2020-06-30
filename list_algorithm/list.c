@@ -75,7 +75,7 @@ int main(void){
 
     Print_ascend(head);             //全てを昇順に表示
 
-    Print_ascend(Reverse(head));             //全てを降順に表示
+    Print_ascend(Reverse(head));    //全てを降順に表示
 
 }
 /*リスト構造について*/
