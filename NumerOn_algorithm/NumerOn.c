@@ -64,7 +64,7 @@ int main(void){
         Eat=0;
         Bite=0;
 
-        printf("\ninput check %d number:\n", N);                //PCの4桁を当てる
+        printf("\ninput check %d number:\n", N);            //PCの4桁を当てる
         for(int i=0;i<N;i++){ scanf("%d", &check_PC[i]); }
 
         printf("\nMy answer(%d): ", sum);                   //4桁の確認
