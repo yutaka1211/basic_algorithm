@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #define N (1000)
 
 void Jap_binary(int x, int *y){
@@ -20,18 +19,18 @@ void Jap_binary(int x, int *y){
 
 int main(void){
 
-    int i, j;
-    int count;
+    int count1=0;                   //文字数を数える
+    int count2;
     char jap[21];
 
     printf("20文字以下の日本語を入力\n");
-    fgets(jap, sizeof(jap), stdin);
+    gets(jap);
 
-    jap[strlen(jap)-1]='\0';        //改行を消してNULL文字を追加
+    for(int i=0;jap[i]!='\0';i++){ count1++; }
 
-    for(i=0;i<strlen(jap);i+=2){
-        count=16;
-        for(j=0;j<2;j++){ Jap_binary(jap[i+j], &count); }
+    for(int i=0;i<count1;i++){
+        count2=16;
+        for(int j=0;j<2;j++){ Jap_binary(jap[i+j], &count2); }
         printf(" ");
     }
 
