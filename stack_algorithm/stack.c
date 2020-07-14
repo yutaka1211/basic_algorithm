@@ -21,7 +21,7 @@ void pop(int *array){
 }
 
 int main(void){
-    int array[N]={0};                          //配列全てを0で初期化
+    int array[N]={0};                           //配列全てを0で初期化
 
     /*例*/
     push(array, 1);
