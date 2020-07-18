@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+void Print(int *array, int n){
+
+    for(int i=0;i<n;i++){
+        printf("%d ", array[i]);
+    }
+    printf("\n\n");
+}
+
 void Big(int array[], int n, int k){
     int i, j, x;
     int sum=0;
@@ -30,6 +38,10 @@ void Big(int array[], int n, int k){
 
 int main(void){
     int array[8]={3,9,0,5,6,2,1,4};
+
+    Print(array, 8);
+
+    printf("降順に3つ、値と添字を表示\n\n");
 
     Big(array, 8, 3);
 

@@ -5,6 +5,13 @@
 int max=0;
 int sum=0;
 
+void Print(int *array){
+    for(int i=0;i<N;i++){
+        printf("%d ", array[i]);
+    }
+    printf("\n\n");
+}
+
 void search(int *array, int size){
     int i, j, k;
     int work[N];                                    //作業用配列
@@ -32,7 +39,11 @@ void search(int *array, int size){
 int main(void){
     int array[]={3,5,7,6,2,4};                      //集合を代入
 
+    Print(array);
+
     search(array, N);
+
+    printf("隣合わないように最大合計値を探索\n\n");
 
     printf("max=%d\n", max);
 
