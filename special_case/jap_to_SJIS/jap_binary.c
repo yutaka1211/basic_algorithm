@@ -36,4 +36,4 @@ int main(void){
 
     return 0;
 }
-/*Shift_JISでのエンコードで動作*/
+/*Windows開発プロンプトで可能*/
