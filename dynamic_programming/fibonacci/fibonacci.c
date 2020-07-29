@@ -12,7 +12,7 @@ int fib(int n){
 int main(void){
     int number;
 
-    printf("何番目のフィボナッチ数が出力しますか？\n");
+    printf("何番目のフィボナッチ数を表示しますか？\n");
     scanf("%d", &number);
 
     printf("%d番目のフィボナッチ数は%dです\n", number, fib(number));
